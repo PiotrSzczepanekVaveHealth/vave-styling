@@ -3,3 +3,6 @@
 // Do not edit it manually.
 
 export type { VaveBreakpoints, VaveTheme, VaveThemeName } from './themes';
+export type { FontAssetFileName, FontAssetName } from './fonts';
+export type { IconName, IconSize, IconVariant, IconWeight, IconWeightFor } from './icons';
+export type { FontFamilyName, TypographyName, TypographyStyle } from './typography';

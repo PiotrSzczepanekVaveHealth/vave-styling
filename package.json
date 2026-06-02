@@ -17,9 +17,11 @@
       "import": "./dist/unistyles.js",
       "require": "./dist/unistyles.cjs"
     },
+    "./assets/*": "./assets/*",
     "./package.json": "./package.json"
   },
   "files": [
+    "assets",
     "dist",
     "tokens/figma.variables.json",
     "README.md"
@@ -27,7 +29,9 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "download:icons": "tsx scripts/download-icon-assets.ts",
     "generate:tokens": "tsx scripts/generate-tokens.ts",
+    "import:icons": "tsx scripts/import-icon-assets.ts",
     "sync:figma": "npm run generate:tokens",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -44,12 +48,17 @@
   "license": "UNLICENSED",
   "sideEffects": false,
   "peerDependencies": {
+    "react": ">=18.0.0",
     "react-native": ">=0.78.0",
     "react-native-nitro-modules": ">=0.35.2",
+    "react-native-svg": ">=15.0.0",
     "react-native-unistyles": ">=3.2.0"
   },
   "devDependencies": {
     "@types/node": "^25.9.1",
+    "@types/react": "^19.2.16",
+    "react": "^19.2.7",
+    "react-native-svg": "^15.15.5",
     "tsup": "^8.5.1",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",

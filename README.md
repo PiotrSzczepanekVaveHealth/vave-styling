@@ -98,10 +98,59 @@ import { themes } from 'vave-styling';
 const lightTheme: VaveTheme = themes.light;
 ```
 
+## Icons
+
+The package exports icon metadata from the Figma `Navigation Bar` component set. Each icon supports four sizes: `16`, `24`, `32`, and `48`.
+
+```ts
+import { iconNames, iconSizes, iconVariants, icons } from 'vave-styling';
+
+const supportedSizes = iconSizes;
+const availableWeights = icons.probe.weights;
+const allProbeVariants = iconVariants.filter((variant) => variant.name === 'probe');
+```
+
+Raw SVG assets are expected under `assets/icons` and can be generated from Figma with `scripts/figma-plugin-export-icons.js` plus `npm run import:icons`. Cursor MCP can read SVGs with `exportAsync`, but its plugin runtime cannot currently POST/write the large export payload directly to local disk.
+
+Physical SVG import flow:
+
+Automatic download flow:
+
+1. Create a Figma token with `file_content:read`.
+2. Run `FIGMA_ACCESS_TOKEN=... npm run download:icons`.
+
+Manual fallback:
+
+1. Run `scripts/figma-plugin-export-icons.js` in a Figma plugin context for node `408:7788`.
+2. Save the downloaded payload as `tokens/figma.icon-assets.json`.
+3. Run `npm run import:icons`.
+
+This writes raw SVG files to `assets/icons` and regenerates the `VaveIcon` SVG source map.
+
+```tsx
+import { VaveIcon } from 'vave-styling';
+
+<VaveIcon name="probe" size={24} weight="light" color="#00b2b2" />;
+```
+
+## Typography
+
+```ts
+import { fontAssetPaths, typography } from 'vave-styling';
+
+const labelStyle = typography.text12Medium;
+const titleStyle = typography.text16Bold;
+const mulishRegular = fontAssetPaths.mulishRegular;
+```
+
+Physical font files are packaged in `assets/fonts`.
+
 ## Scripts
 
 ```sh
 npm run generate:tokens
+npm run download:icons
+npm run import:icons
 npm run sync:figma
 npm run typecheck
 npm run test

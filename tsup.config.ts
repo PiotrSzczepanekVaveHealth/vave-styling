@@ -8,5 +8,5 @@ export default defineConfig({
   clean: true,
   splitting: false,
   treeshake: true,
-  external: ['react-native', 'react-native-unistyles', 'react-native-nitro-modules'],
+  external: ['react', 'react-native', 'react-native-svg', 'react-native-unistyles', 'react-native-nitro-modules'],
 });

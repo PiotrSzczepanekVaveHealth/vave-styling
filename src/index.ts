@@ -1,5 +1,24 @@
 export { breakpoints, themes } from './generated/themes';
-export type { VaveBreakpoints, VaveTheme, VaveThemeName } from './generated/types';
+export { fontAssetFileNames, fontAssetPaths } from './generated/fonts';
+export { iconNames, icons, iconSizes, iconVariants, iconWeights } from './generated/icons';
+export { fontFamilies, typography } from './generated/typography';
+export { iconSvgSources, VaveIcon } from './icons';
+export type { IconSvgSourceKey, VaveIconProps } from './icons';
+export type {
+  FontAssetFileName,
+  FontAssetName,
+  FontFamilyName,
+  IconName,
+  IconSize,
+  IconVariant,
+  IconWeight,
+  IconWeightFor,
+  TypographyName,
+  TypographyStyle,
+  VaveBreakpoints,
+  VaveTheme,
+  VaveThemeName,
+} from './generated/types';
 
 export { configureVaveStyling } from './configure';
 export type { ConfigureVaveStylingOptions } from './configure';
