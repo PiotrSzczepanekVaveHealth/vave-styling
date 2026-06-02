@@ -1,0 +1,58 @@
+{
+  "name": "vave-styling",
+  "version": "0.1.0",
+  "description": "Shared Figma-driven design tokens and Unistyles themes for Vave React Native apps.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./unistyles": {
+      "types": "./dist/unistyles.d.ts",
+      "import": "./dist/unistyles.js",
+      "require": "./dist/unistyles.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "tokens/figma.variables.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "generate:tokens": "tsx scripts/generate-tokens.ts",
+    "sync:figma": "npm run generate:tokens",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "react-native",
+    "unistyles",
+    "figma",
+    "design-tokens",
+    "theme"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "peerDependencies": {
+    "react-native": ">=0.78.0",
+    "react-native-nitro-modules": ">=0.35.2",
+    "react-native-unistyles": ">=3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}
