@@ -41,7 +41,7 @@ export const typography = {
     fontSize: 10,
     fontWeight: '700',
     lineHeight: 10,
-    letterSpacing: 0,
+    letterSpacing: 0.2,
     textTransform: 'capitalize',
   },
 } as const;

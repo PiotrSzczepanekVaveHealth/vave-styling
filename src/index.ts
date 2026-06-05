@@ -3,7 +3,7 @@ export { fontAssetFileNames, fontAssetPaths } from './generated/fonts';
 export { iconNames, icons, iconSizes, iconVariants, iconWeights } from './generated/icons';
 export { fontFamilies, typography } from './generated/typography';
 export { iconSvgSources, VaveIcon } from './icons';
-export type { IconSvgSourceKey, VaveIconProps } from './icons';
+export type { IconSvgSourceKey, VaveIconColorMap, VaveIconProps } from './icons';
 export type {
   FontAssetFileName,
   FontAssetName,
