@@ -1,6 +1,6 @@
 {
   "name": "vave-styling",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Shared Figma-driven design tokens and Unistyles themes for Vave React Native apps.",
   "type": "module",
   "main": "./dist/index.cjs",

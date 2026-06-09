@@ -3,6 +3,7 @@
 // Do not edit it manually.
 
 export const fontAssetPaths = {
+  fragmentMonoRegular: 'vave-styling/assets/fonts/FragmentMono-Regular.ttf',
   mulishBold: 'vave-styling/assets/fonts/Mulish-Bold.ttf',
   mulishExtraBold: 'vave-styling/assets/fonts/Mulish-ExtraBold.ttf',
   mulishLight: 'vave-styling/assets/fonts/Mulish-Light.ttf',
@@ -14,6 +15,7 @@ export const fontAssetPaths = {
 } as const;
 
 export const fontAssetFileNames = [
+  'FragmentMono-Regular.ttf',
   'Mulish-Bold.ttf',
   'Mulish-ExtraBold.ttf',
   'Mulish-Light.ttf',

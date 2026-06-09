@@ -31,14 +31,17 @@ describe('generated typography', () => {
       'text12BoldAllCaps',
       'text12Medium',
       'text10Bold',
+      'rulerLabel',
     ]);
   });
 });
 
 describe('font assets', () => {
   it('contains packaged Mulish font assets', () => {
+    expect(fontAssetFileNames).toContain('FragmentMono-Regular.ttf');
     expect(fontAssetFileNames).toContain('Mulish-Regular.ttf');
     expect(fontAssetFileNames).toContain('Mulish-Bold.ttf');
+    expect(fontAssetPaths.fragmentMonoRegular).toBe('vave-styling/assets/fonts/FragmentMono-Regular.ttf');
     expect(fontAssetPaths.mulishMedium).toBe('vave-styling/assets/fonts/Mulish-Medium.ttf');
   });
 });

@@ -140,6 +140,8 @@ import { fontAssetPaths, typography } from 'vave-styling';
 
 const labelStyle = typography.text12Medium;
 const titleStyle = typography.text16Bold;
+const rulerLabelStyle = typography.rulerLabel;
+const fragmentMonoRegular = fontAssetPaths.fragmentMonoRegular;
 const mulishRegular = fontAssetPaths.mulishRegular;
 ```
 
